@@ -1,0 +1,106 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+/* Heading styles */
+h1 {
+    color: #333;
+    text-align: left; /* Align heading to the left */
+    margin-right: auto; /* Push h1 to the left */
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    flex-grow: 1; /* Occupy remaining space */
+}
+
+/* File input styles */
+input[type="file"] {
+    margin-bottom: 20px; /* Add bottom margin */
+    padding: 50px; /* Increase padding for height */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    width: 100%; /* Occupy full width */
+    box-sizing: border-box;
+}
+
+input[type="file"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Submit button styles */
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Image preview container styles */
+#imagePreviewContainer {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Image styles */
+#imagePreviewContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styles */
+nav {
+    text-align: right;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}

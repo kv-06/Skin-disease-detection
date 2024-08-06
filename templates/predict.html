@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease Detection</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Skin Disease</h1>
+            <h1>Detection</h1>
+        </div>
+        <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput" accept="image/*" onchange="previewImage()">
+            <button type="submit">Detect Disease</button>
+            <br>
+            
+        </form>
+        <!-- Container to display the uploaded image -->
+        <div id="imagePreviewContainer"></div>
+    </div>
+    
+
+    <script>
+        function previewImage() {
+            var fileInput = document.getElementById('fileInput');
+            var imagePreviewContainer = document.getElementById('imagePreviewContainer');
+            
+            // Remove any existing image preview
+            while (imagePreviewContainer.firstChild) {
+                imagePreviewContainer.removeChild(imagePreviewContainer.firstChild);
+            }
+
+            // Create a new image element
+            var img = document.createElement('img');
+            img.style.maxWidth = '100%';
+
+            // Set the source of the image to the selected file
+            if (fileInput.files && fileInput.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+
+                // Append the image to the image preview container
+                imagePreviewContainer.appendChild(img);
+            }
+        }
+    </script>
+</body>
+</html>

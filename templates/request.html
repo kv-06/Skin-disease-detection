@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Details</title>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- Include your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Request Details</h1>
+        <div class="request-details">
+            <div class="image">
+                <img src="data:image/jpeg;base64,{{  request.ENCODED_IMAGE }}" alt="Predicted Image">
+            </div>
+            <div class="details">
+                <p>Prediction: {{ request.PREDICTION }}</p>
+                <p>Status: {% if request.CONFIRMATION_STATUS == 0 %} Pending {% else %} Confirmed {% endif %}</p>
+                {% if request.CONFIRMATION_STATUS == 0 %}
+                    <form action="/request" method="post">
+                        <input type="checkbox" name="reply" value="yes"> Yes
+                        <input type="checkbox" name="reply" value="no"> No
+                        <input type="checkbox" name="reply" value="probably"> Probably
+                        <br>
+                        <textarea name="suggestions" rows="4" cols="50" placeholder="Enter suggestions"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                {% else %}
+                    <p>Reply: {{ request.REPLY }}</p>
+                    <p>Suggestions: {{ request.SUGGESTIONS }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

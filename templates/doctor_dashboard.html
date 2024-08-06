@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="/static/doctor.css"> <!-- Include your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Dashboard</h1>
+        <div class="requests">
+            {% for request in requests %}
+                <div class="request">
+                    <div class="image">
+                        <img src="data:image/jpeg;base64,{{  request[-1]}}" alt="Predicted Image">
+                    </div>  
+                    <div class="details">
+                        <p>Prediction: {{ request.PREDICTION }}</p>
+                        <p>Status: {% if request.CONFIRMATION_STATUS == 0 %} Pending {% else %} Confirmed {% endif %}</p>
+                        <a href="/request">View Details</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

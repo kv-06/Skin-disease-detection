@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/result.css">
+
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <p>The predicted disease is {{ disease }} with {{probability}} % probabilty</p>
+    <!-- Link to go back to the previous page -->
+    
+    
+    <p>Wanna Consult a Doctor? CLick below</p>
+
+    <div>
+        <form action = "/consult" method = "post">
+             <button type="submit">Consult a Doctor</button>
+        </form>
+    </div>
+
+    <a href="/predict" class="goBackLink">Go back</a>
+</body>
+</html>
+

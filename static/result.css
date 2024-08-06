@@ -1,0 +1,84 @@
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change the font */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Container styles */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h1 {
+    color: #333;
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px;
+    font-size: 32px; /* Increase font size */
+    font-weight: bold; /* Bold font weight */
+}
+
+/* Paragraph styles */
+p {
+    text-align: center; /* Center paragraphs */
+    color: #666; /* Slightly darker gray text color */
+    font-size: 18px; /* Increase font size */
+    line-height: 1.5; /* Increase line height for better readability */
+}
+
+/* Link styles */
+a {
+    display: inline-block; /* Display links inline-block */
+    text-align: center; /* Center the link text */
+    margin-top: 20px; /* Add some space above the link */
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline links on hover */
+}
+
+/* Form container styles */
+form {
+    text-align: center; /* Center the form */
+    margin-top: 20px; /* Add some space above the form */
+}
+
+/* Button styles */
+button[type="submit"] {
+    padding: 12px 24px; /* Increase padding */
+    background-color: #007bff; /* Blue button background color */
+    color: #fff; /* White button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+/* Link styles */
+a.goBackLink {
+    display: block; /* Make the link a block element */
+    text-align: center; /* Center the link text */
+    margin-top: 20px; /* Add some space above the link */
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a.goBackLink:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline links on hover */
+}
