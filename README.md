@@ -25,3 +25,6 @@ This project is a sophisticated web application developed using the Flask framew
 
 ## Contribution
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or suggestions.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
